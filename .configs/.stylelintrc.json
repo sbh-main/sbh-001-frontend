@@ -1,0 +1,30 @@
+{
+  "extends": [
+    "stylelint-config-idiomatic-order",
+    "stylelint-config-standard",
+    "stylelint-scss"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "**/*.component.ts"
+      ],
+      "customSyntax": "postcss-angular"
+    },
+    {
+      "files": [
+        "**/*.sass"
+      ],
+      "customSyntax": "postcss-sass"
+    },
+    {
+      "files": [
+        "**/*.scss"
+      ],
+      "customSyntax": "postcss-scss"
+    }
+  ],
+  "rules": {
+    "no-empty-source": null
+  }
+}

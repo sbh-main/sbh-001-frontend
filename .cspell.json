@@ -1,0 +1,34 @@
+{
+  "version": "0.2",
+  "language": "en",
+
+  "allowCompoundWords": true,
+  "useGitignore": true,
+  "globRoot": "./../",
+
+  "dictionaryDefinitions": [
+    {
+      "name": "customWords",
+      "path": "./.configs/.customWords.cspell"
+    }
+  ],
+  "dictionaries": [
+    "companies",
+    "css",
+    "customWords",
+    "html",
+    "misc",
+    "node",
+    "npm",
+    "ru-ru",
+    "softwareTerms",
+    "typescript"
+  ],
+  "ignorePaths": [
+    "**/pnpm-lock.yaml",
+    "**/package.json"
+  ],
+  "import": [
+    "@cspell/dict-ru_ru/cspell-ext.json"
+  ]
+}
