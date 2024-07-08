@@ -1,0 +1,11 @@
+services:
+  frontend:
+    build:
+      target: dev
+    container_name: frontend-dev
+    env_file:
+      - ./.dev.env
+    environment:
+      NODE_ENV: ${NODE_ENV:-development}
+    ports:
+      - ${DOCKER_EXPOSED_PORT:-4200}:${DOCKER_INTERNAL_PORT:-4200}
