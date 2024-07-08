@@ -1,0 +1,60 @@
+{
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "modificationsIfAvailable",
+
+  "cSpell.enabled": true,
+
+  "eslint.enable": true,
+  "eslint.format.enable": true,
+  "eslint.useFlatConfig": true,
+  "eslint.rules.customizations": [
+    {
+      "rule": "*",
+      "severity": "warn"
+    }
+  ],
+
+  "bashBeautify.tabSize": 2,
+  "shellcheck.enable": true,
+
+  "todo-tree.general.tags": [
+    "TODO",
+    "@todo",
+    "FIXME"
+  ],
+  "todo-tree.regex.regex": "(//|#|<!--|/\\*|^\\s*\\*)\\s*($TAGS)",
+
+  "stylelint.enable": true,
+  "stylelint.configFile": "./.configs/.stylelintrc.json",
+  "stylelint.packageManager": "pnpm",
+  "css.validate": false,
+  "scss.validate": false,
+  "less.validate": false,
+  "stylelint.validate": [
+    "css",
+    "sass",
+    "scss",
+  ],
+
+  "[css]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "vscode.markdown-language-features"
+  },
+  "[sass]": {
+    "editor.defaultFormatter": "syler.sass-indented"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  }
+}

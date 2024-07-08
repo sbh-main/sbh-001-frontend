@@ -1,0 +1,40 @@
+name: build-lint-test
+
+on:
+  push:
+  pull_request:
+  workflow_call:
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - uses: ./.github/actions/install-deps
+
+      - name: build
+        run: pnpm build
+
+  lint:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - uses: ./.github/actions/install-deps
+
+      - name: lint
+        run: pnpm lint
+
+  test:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - uses: ./.github/actions/install-deps
+
+      - name: lint
+        run: pnpm jest:ci

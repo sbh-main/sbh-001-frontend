@@ -1,0 +1,79 @@
+services:
+  frontend:
+    develop:
+      watch: # got this overhead bc of relative paths resolution :(
+        # used when stack container is running (`docker compose up` from project's root directory)
+
+        #
+        # REBUILD
+        #
+
+        # npm
+        - action: rebuild
+          path: ./../frontend/package.json
+          target: /app/package.json
+
+        # configs
+        - action: rebuild
+          path: ./../frontend/.configs/
+          target: /app/.configs/
+
+        - action: rebuild
+          path: ./../frontend/angular.json
+          target: ./app/angular.json
+
+        #
+        # SYNC
+        #
+
+        - action: sync
+          path: ./../frontend/server.ts
+          target: ./app/server.ts
+
+        # source files
+        - action: sync
+          path: ./../frontend/src/
+          target: /app/src/
+
+        # static content
+        - action: sync
+          path: ./../frontend/public/
+          target: /app/public/
+
+        # used when only frontend container is running (`docker compose up` from frontend's root directory)
+
+        #
+        # REBUILD
+        #
+
+        # npm
+        - action: rebuild
+          path: ./../package.json
+          target: /app/package.json
+
+        # configs
+        - action: rebuild
+          path: ./../.configs/
+          target: /app/.configs/
+
+        - action: rebuild
+          path: ./../angular.json
+          target: ./app/angular.json
+
+        #
+        # SYNC
+        #
+
+        - action: sync
+          path: ./../server.ts
+          target: ./app/server.ts
+
+        # source files
+        - action: sync
+          path: ./../src/
+          target: /app/src/
+
+        # static content
+        - action: sync
+          path: ./../public/
+          target: /app/public/
