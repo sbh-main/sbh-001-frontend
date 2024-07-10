@@ -119,7 +119,7 @@ importers:
         version: 36.0.1(stylelint@16.6.1(typescript@5.4.5))
       stylelint-scss:
         specifier: ^6.3.2
-        version: 6.3.2(stylelint@16.6.1(typescript@5.4.5))
+        version: 6.4.0(stylelint@16.6.1(typescript@5.4.5))
       ts-node:
         specifier: ^11.0.0-beta.1
         version: 11.0.0-beta.1(@types/node@18.19.39)(typescript@5.4.5)
@@ -4150,6 +4150,9 @@ packages:
   known-css-properties@0.31.0:
     resolution: {integrity: sha512-sBPIUGTNF0czz0mwGGUoKKJC8Q7On1GPbCSFPfyEsfHb2DyBG0Y4QtV+EVWpINSaiGKZblDNuF5AezxSgOhesQ==}
 
+  known-css-properties@0.34.0:
+    resolution: {integrity: sha512-tBECoUqNFbyAY4RrbqsBQqDFpGXAEbdD5QKr8kACx3+rnArmuuR22nKQWKazvp07N9yjTyDZaw/20UIH8tL9DQ==}
+
   kuler@2.0.0:
     resolution: {integrity: sha512-Xq9nH7KlWZmXAtodXDDRE7vs6DU1gTU8zYDHDiWLSip45Egwq3plLHzPn27NgvzL2r1LMPC1vdqh98sQxtqj4A==}
 
@@ -5372,8 +5375,8 @@ packages:
     peerDependencies:
       stylelint: ^14.0.0 || ^15.0.0 || ^16.0.1
 
-  stylelint-scss@6.3.2:
-    resolution: {integrity: sha512-pNk9mXOVKkQtd+SROPC9io8ISSgX+tOVPhFdBE+LaKQnJMLdWPbGKAGYv4Wmf/RrnOjkutunNTN9kKMhkdE5qA==}
+  stylelint-scss@6.4.0:
+    resolution: {integrity: sha512-1BKRzh2TW38hZm/IWdvBVjlJRERB2zTiwm1xaOeDtUEmEKfxYMNr9THBQQtBV8wGxal/sN+TRsF7v9A5sqGI1A==}
     engines: {node: '>=18.12.0'}
     peerDependencies:
       stylelint: ^16.0.2
@@ -10716,6 +10719,8 @@ snapshots:
 
   known-css-properties@0.31.0: {}
 
+  known-css-properties@0.34.0: {}
+
   kuler@2.0.0: {}
 
   launch-editor@2.8.0:
@@ -12018,9 +12023,9 @@ snapshots:
       postcss-sorting: 8.0.2(postcss@8.4.39)
       stylelint: 16.6.1(typescript@5.4.5)
 
-  stylelint-scss@6.3.2(stylelint@16.6.1(typescript@5.4.5)):
+  stylelint-scss@6.4.0(stylelint@16.6.1(typescript@5.4.5)):
     dependencies:
-      known-css-properties: 0.31.0
+      known-css-properties: 0.34.0
       postcss-media-query-parser: 0.2.3
       postcss-resolve-nested-selector: 0.1.1
       postcss-selector-parser: 6.1.0
